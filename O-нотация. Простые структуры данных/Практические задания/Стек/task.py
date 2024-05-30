@@ -11,7 +11,8 @@ class Stack:
 
         :param elem: Элемент, который должен быть добавлен
         """
-        ...  # TODO реализовать операцию push
+        self._stack.append(elem)
+          # TODO реализовать операцию push
 
     def pop(self) -> Any:
         """
@@ -21,7 +22,7 @@ class Stack:
 
         :return: Извлеченный с вершины стека элемент.
         """
-        ...  # TODO реализовать операцию pop
+        self._stack.pop()# TODO реализовать операцию pop
 
     def peek(self, ind: int = 0) -> Any:
         """
@@ -34,7 +35,7 @@ class Stack:
 
         :return: Значение просмотренного элемента
         """
-        ...  # TODO реализовать операцию peek
+        self._stack.  # TODO реализовать операцию peek
 
     def clear(self) -> None:
         """ Очистка стека. """

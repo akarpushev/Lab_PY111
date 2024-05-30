@@ -3,8 +3,8 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 263
-        length: 37
+      - offset: 296
+        length: 34
         placeholder_text: "...  # TODO реализовать операцию push"
         initial_state:
           length: 37
@@ -13,8 +13,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: self._stack.append(elem)
-      - offset: 514
-        length: 36
+      - offset: 544
+        length: 48
         placeholder_text: "...  # TODO реализовать операцию pop"
         initial_state:
           length: 36
@@ -27,14 +27,14 @@ files:
                       raise IndexError("Извлечение из пустого стека не возможно")
           
                   return self._stack.pop()
-      - offset: 1022
-        length: 37
+      - offset: 1064
+        length: 46
         placeholder_text: "...  # TODO реализовать операцию peek"
         initial_state:
           length: 37
           offset: 1022
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
         encrypted_possible_answer: |-
           if not isinstance(ind, int):
@@ -45,7 +45,7 @@ files:
           
                   inv_ind = -1 - ind
                   return self._stack[inv_ind]
-      - offset: 1129
+      - offset: 1180
         length: 38
         placeholder_text: "...  # TODO реализовать операцию clear"
         initial_state:
@@ -55,7 +55,7 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: self._stack.clear()
-      - offset: 1253
+      - offset: 1304
         length: 40
         placeholder_text: "...  # TODO реализовать операцию __len__"
         initial_state:
