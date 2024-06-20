@@ -13,9 +13,9 @@ def stairway_path(count_stairs: int) -> List[int]:
     if count_stairs < 0:
         raise ValueError
 
-
     if count_stairs == 0:
         return [0]
+
     if count_stairs == 1:
         return [0, 1]
 
