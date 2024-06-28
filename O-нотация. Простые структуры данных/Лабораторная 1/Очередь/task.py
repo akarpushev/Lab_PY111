@@ -9,12 +9,11 @@ class Queue:
         """
         Очередь с помощью python list
         TODO Описать где начало и конец очереди
+        Начало очереди - начало списка (левая сторона).
+        Конец очереди - конец списка (правая сторона).
         """
-        self.queue = list()
-        self.start = self.queue[::-1]
-        self.end = self.queue[0]
-
         # TODO инициализировать список
+        self.queue = []
 
     def enqueue(self, elem: Any) -> None:
         """
@@ -22,8 +21,9 @@ class Queue:
 
         :param elem: Элемент, который должен быть добавлен
         """
-        self.queue.insert(self.end, elem)
         # TODO реализовать метод enqueue
+        self.queue.append(elem)
+        # Сложность: O(1) амортизированное время
 
     def dequeue(self) -> Any:
         """
@@ -33,12 +33,12 @@ class Queue:
 
         :return: Извлеченный с начала очереди элемент.
         """
-        for elem in self.queue:
-            if elem:
-                return elem.pop(self.start)
-
-        raise IndexError("Извлечение из пустой очереди не возможно")
         # TODO реализовать метод dequeue
+        if not self.queue:
+            raise IndexError("Извлечение из пустой очереди невозможно")
+
+        return self.queue.pop(0)
+        # Сложность: O(n) из-за смещения всех остальных элементов
 
     def peek(self, ind: int = 0) -> Any:
         """
@@ -51,21 +51,37 @@ class Queue:
 
         :return: Значение просмотренного элемента
         """
+        # TODO реализовать метод peek
         if not isinstance(ind, int):
             raise TypeError(f"Индекс должен быть целочисленного типа, а не {type(ind).__name__}")
 
         if not 0 <= ind < len(self.queue):
-            raise IndexError("Индекс все границ очереди")
+            raise IndexError("Индекс вне границ очереди")
 
         return self.queue[ind]
-        # TODO реализовать метод peek
+        # Сложность: O(1), так как доступ по индексу в списке имеет постоянное время
 
     def clear(self) -> None:
         """ Очистка очереди. """
-        self.queue.clear()
         # TODO реализовать метод clear
+        self.queue.clear()
+        # Сложность: O(n), так как требуется удаление всех элементов из списка
 
     def __len__(self):
         """ Количество элементов в очереди. """
-        return len(self.queue)
         # TODO реализовать метод __len__
+        return len(self.queue)
+        # Сложность: O(1), так как доступ к длине списка имеет постоянное время
+
+#
+# # Пример использования:
+# if __name__ == '__main__':
+#     q = Queue()
+#     q.enqueue(1)
+#     q.enqueue(2)
+#     q.enqueue(3)
+#     print(q.dequeue())  # 1
+#     print(q.peek())  # 2
+#     print(len(q))  # 2
+#     q.clear()
+#     print(len(q))  # 0

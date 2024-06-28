@@ -17,7 +17,7 @@ def check_brackets(brackets_row: str) -> bool:
         return False if stack !=0 else True
 
 
-
+    # еще вариант
     # while '()' in brackets_row:
     #     text = brackets_row.replace('()', '')
     #     return not text

@@ -3,7 +3,7 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 626
+      - offset: 643
         length: 44
         placeholder_text: "...  # TODO реализовать проверку скобочной группы"
         initial_state:
@@ -58,6 +58,6 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 06 Jun 2024 13:04:08 UTC"
+  time: "Fri, 28 Jun 2024 15:08:42 UTC"
 record: -1
 solution_hidden: false
