@@ -4,14 +4,14 @@ files:
     visible: true
     placeholders:
       - offset: 520
-        length: 53
+        length: 48
         placeholder_text: "...  # TODO реализовать алгоритм сортировки пузырьком"
         initial_state:
           length: 53
           offset: 520
         initialized_from_dependency: false
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
         encrypted_possible_answer: '...'
     text: |
       from typing import Sequence
@@ -71,5 +71,8 @@ files:
   - name: bubble_sort.gif
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 28 Jun 2024 16:26:02 UTC"
 record: -1

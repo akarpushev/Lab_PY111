@@ -4,14 +4,14 @@ files:
     visible: true
     placeholders:
       - offset: 486
-        length: 54
+        length: 49
         placeholder_text: "...  # TODO реализовать алгоритм сортировки подсчетами"
         initial_state:
           length: 54
           offset: 486
         initialized_from_dependency: false
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
         encrypted_possible_answer: '...'
     text: |
       from typing import Sequence
@@ -70,5 +70,8 @@ files:
   - name: counting_sort.gif
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 28 Jun 2024 16:30:35 UTC"
 record: -1
