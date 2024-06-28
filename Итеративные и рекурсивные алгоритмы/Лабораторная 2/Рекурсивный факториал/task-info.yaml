@@ -3,16 +3,16 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 203
-        length: 66
+      - offset: 246
+        length: 61
         placeholder_text: "...  # TODO реализовать рекурсивный алгоритм нахождения фак\
       ториала"
         initial_state:
           length: 66
           offset: 203
         initialized_from_dependency: false
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
         encrypted_possible_answer: '...'
     text: |
       def factorial_recursive(n: int) -> int:
@@ -57,5 +57,8 @@ files:
   - name: img.png
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 28 Jun 2024 16:15:28 UTC"
 record: -1
